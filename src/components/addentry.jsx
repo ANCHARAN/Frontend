@@ -113,7 +113,7 @@ export function Addentry(props) {
   };
 
   const submitForm = () => {
-    const entryRequest = fetch('http://localhost:3000/addentry', {
+    const entryRequest = fetch('https://demo-app-v4ik.onrender.com/addentry', {
       method: 'POST',
       body: JSON.stringify({
         name: formData.name,
@@ -132,7 +132,7 @@ export function Addentry(props) {
       },
     })
 
-    const entryRequest1 = fetch('http://localhost:3000/mutual', {
+    const entryRequest1 = fetch('https://demo-app-v4ik.onrender.com/mutual', {
       method: 'POST',
       body: JSON.stringify({
         name: formData.name,
@@ -151,7 +151,7 @@ export function Addentry(props) {
       },
     })
     
-    const entryRequest2 = fetch('http://localhost:3000/matchPreferences', {
+    const entryRequest2 = fetch('https://demo-app-v4ik.onrender.com/matchPreferences', {
       method: 'POST',
       body: JSON.stringify({
         name: formData.name,
