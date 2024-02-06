@@ -1,21 +1,21 @@
 import { useState } from 'react'
 import './App.css'
-import { Addtitle } from './components/addtitle'
+import { Addentry } from './components/addentry'
 import { Displaytitle} from './components/displaytitle'
 function App() {
 const [table,setTable]=useState([]);
-fetch("https://demo-app-v4ik.onrender.com/displaytitle")
-.then(async function(res)
-  {
-    const json= await res.json();
-    setTable(json.result);
-  }
-)
+// fetch("http://localhost:3000/displayentry")
+// .then(async function(res)
+//   {
+//     const json= await res.json();
+//     setTable(json.result);
+//   }
+// )
 
   return (
     <div>
-      <Addtitle></Addtitle>
-      <Displaytitle original_table_to_be_passes_as_input={table}></Displaytitle>
+      <Addentry></Addentry>
+      {/* <Displaytitle original_table_to_be_passes_as_input={table}></Displaytitle> */}
     </div>
   )
 }
